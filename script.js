@@ -82,18 +82,18 @@ function removeStudent(id) {
 
 function modifyStudent() {
     return new Promise(function (resolve, reject) {
-        var id = document.getElementsByName('id2')[0].value;  // Obtenemos el ID desde el formulario
+        var id = document.getElementById('id2').value;  // Obtenemos el ID desde el formulario
         var request = new XMLHttpRequest();
-        request.open('POST', `${url}/${id}/update`);
+        request.open('PATCH', `${url}/${id}`);  // Cambiar a PUT para actualizar
         request.setRequestHeader('Content-Type', 'application/json');
 
         var student = JSON.stringify({
             'id': id,
-            'nombre': document.getElementsByName('name2')[0].value,
-            'apellido': document.getElementsByName('lastName2')[0].value,
-            'edad': document.getElementsByName('age2')[0].value,
-            'curso': document.getElementsByName('course2')[0].value,
-            'nivel': document.getElementsByName('level2')[0].value
+            'nombre': document.getElementById('name2').value,
+            'apellido': document.getElementById('lastName2').value,
+            'edad': document.getElementById('age2').value,
+            'curso': document.getElementById('course2').value,
+            'nivel': document.getElementById('level2').value
         });
 
         request.onload = function () {
@@ -167,11 +167,14 @@ function getStudents() {
 }
 
 function saveStudent() {
-    if (document.getElementsByName('name')[0].value.trim() !== '' &&
-        document.getElementsByName('lastName')[0].value.trim() !== '' &&
-        document.getElementsByName('age')[0].value.trim() !== '' &&
-        document.getElementsByName('course')[0].value.trim() !== '' &&
-        document.getElementsByName('level')[0].value.trim() !== '') {
+    if (
+        document.getElementById('id').value.trim() !== '' &&
+        document.getElementById('name').value.trim() !== '' &&
+        document.getElementById('lastName').value.trim() !== '' &&
+        document.getElementById('age').value.trim() !== '' &&
+        document.getElementById('course').value.trim() !== '' &&
+        document.getElementById('level').value.trim() !== ''
+    ) {
         addStudent().then(() => {
             getStudents();
         }).catch(reason => {
@@ -202,11 +205,13 @@ function deleteStudent(id) {
 }
 
 function updateStudent() {
-    if (document.getElementsByName('name2')[0].value.trim() !== '' &&
-        document.getElementsByName('lastName2')[0].value.trim() !== '' &&
-        document.getElementsByName('age2')[0].value.trim() !== '' &&
-        document.getElementsByName('course2')[0].value.trim() !== '' &&
-        document.getElementsByName('level2')[0].value.trim() !== '') {
+    if (
+        document.getElementById('name2').value.trim() !== '' &&
+        document.getElementById('lastName2').value.trim() !== '' &&
+        document.getElementById('age2').value.trim() !== '' &&
+        document.getElementById('course2').value.trim() !== '' &&
+        document.getElementById('level2').value.trim() !== ''
+    ) {
         modifyStudent().then(() => {
             $('#popUp').dialog('close');
             getStudents();
