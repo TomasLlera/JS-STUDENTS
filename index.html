@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tp Entregable</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <h1>Listado de Estudiantes</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Course</th>
+        <th>Level</th>
+        <th>Modify</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr>
+        <td><input id="id"></td>
+        <td><input id="name"></td>
+        <td><input id="lastName"></td>
+        <td><input id="age" type="number"></td>
+        <td><input id="course"></td>
+        <td><input id="level"></td>
+        <td colspan="2"><button onclick="saveStudent()">Add</button></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div id="popUp" title="Modificar Estudiante">
+    <form onsubmit="event.preventDefault(); updateStudent();">
+      <table>
+        <tr><td>Id</td><td><input id="id2" readonly></td></tr>
+        <tr><td>Name</td><td><input id="name2"></td></tr>
+        <tr><td>Last Name</td><td><input id="lastName2"></td></tr>
+        <tr><td>Age</td><td><input id="age2" type="number"></td></tr>
+        <tr><td>Course</td><td><input id="course2"></td></tr>
+        <tr><td>Level</td><td><input id="level2"></td></tr>
+        <tr><td colspan="2"><button type="submit">Update</button></td></tr>
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>

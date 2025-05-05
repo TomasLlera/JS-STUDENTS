@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Estilos generales para el encabezado */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  /* Estilos de la tabla */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos de las celdas de la tabla */
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  /* Encabezados de la tabla */
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  /* Filas alternas para la tabla */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Botones en las filas */
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Efecto para los botones */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos del pop-up para la edición */
+  #popUp {
+    display: none;
+    font-size: 1rem;
+    padding: 20px;
+  }
+  
+  #popUp input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  #popUp button {
+    width: 100%;
+    background-color: #28a745;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  /* Efecto para el botón del pop-up */
+  #popUp button:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilos para los input en la tabla */
+  tfoot input {
+    padding: 8px;
+    margin: 5px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Ajusta el botón agregar */
+  tfoot button {
+    background-color: #007BFF;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Efecto para el botón de agregar */
+  tfoot button:hover {
+    background-color: #0056b3;
+  }
+  
+  
